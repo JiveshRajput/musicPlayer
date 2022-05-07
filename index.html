@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logoBox">
+                <img id="logo" src="logo.PNG">
+                <h2>MusicBox</h2>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Songs</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </header>
+        <section>
+            <div class="musicBox musicList">
+                <h1>Songs List</h1>
+                <div class="songListContainer">
+                    <div class="songItem">
+                        <img class="songItemIcon" src="music/1.jpg">
+                        <p class="songItemName">Viah Wala Card-Official Song</p>
+                        <p class="songItemPlayTime">03:35</p>
+                        <img id="${songObj.indexOf(obj)}" onclick="changeDesign(this.id)" src="songPlayBtn.png" class="songItemPlayBtn">
+                    </div>
+                </div>
+            </div>
+            <div id="musicImg" class="musicBox musicImg">
+                <img src="music/1.jpg" class="thumbnail">
+                <h1>Viah Wala Card - Official Song 2016</h1>
+                <h3>Ravneet</h3>
+            </div>
+        </section>
+        <footer>
+            <div class="progressBarBox">
+                <p class="timeStamps" id="songCurrentTime">00:00</p>
+                <input type="range" id="progressBar" value="0" max="100">
+                <p class="timeStamps" id="songDuration">00:00</p>
+            </div>
+            <div class="iconsBox">
+                <div class="icons"><img id="backSongBtn" src="fastBackwardBtn.png"></div>
+                <div class="icons"><img id="playBtn" src="playBtn.png"></div>
+                <div class="icons"><img id="nextSongBtn" src="fastForwardBtn.png"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src='withoutFetch.js'></script>
+    <!-- <script src='script.js'></script> -->
+</body>
+
+</html>
+

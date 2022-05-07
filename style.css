@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+/* BODY */
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* NAVBAR */
+header {
+    /* position: relative; */
+    width: 100%;
+    height: 10%;
+    padding: 10px 40px;
+    background: linear-gradient(to right, #fdc830, #f37335);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.20);
+    z-index: 20;
+}
+
+.logoBox {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.logoBox h2 {
+    color: #281a62;
+    -webkit-text-stroke: 1px #e22f89;
+    font-size: 28px;
+}
+
+#logo {
+    width: 48px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: white;
+    outline: none;
+}
+
+
+
+/* Screen */
+section {
+    width: 100%;
+    height: 77%;
+    background-color: #281a62;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.musicBox {
+    width: 100%;
+    padding: 20px 20px;
+}
+/* Left Side */
+section .musicList {
+    width: 55%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+section .musicList h1{
+    font-size: 2rem;
+    font-weight: 600;
+    height: 15%;
+}
+
+section .musicList .songListContainer{
+    width: 100%;
+    height: 85%;
+    overflow-y: scroll;
+}
+/* Right Side */
+section .musicImg {
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 100%), url(music/1.jpg) no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+section .thumbnail{
+    width: 100px;
+    border: 4px solid #fff;
+    margin: 0 0 15px 0;
+    border-radius: 50%;
+}
+
+@keyframes rotateThumbnail {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+section .musicImg h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+section .musicImg h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+
+
+/* SONG TABS */
+.songItem{
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    padding: 5px 30px;
+    background-color: #fdc830;
+    border-radius: 25px;
+    color: #281a62;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.songItemIcon{
+    width: 35px;
+    border: 2px solid #e22f89;
+    /* #281a62; */
+    border-radius: 50%;
+}
+.songItemName{
+    width: 50%;
+    height: 25px;
+    overflow: hidden;
+}
+.songItemPlayTime{
+    color: #e22f89;
+}
+.songItemPlayBtn{
+    width: 25px;
+    cursor: pointer;
+}
+.songItemPlayBtn:active{
+    animation: animated 0.3s ease-in 0s 1 normal forwards;
+}
+
+
+
+/* MUSIC BAR */
+footer {
+    width: 100%;
+    height: 13%;
+    padding: 8px 40px;
+    background-color: red;
+    background: linear-gradient(to right, #e22f89, #281a62);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.20);
+}
+
+.progressBarBox{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#progressBar{
+    width: 80%;
+}
+
+.timeStamps{
+    color:#fff;
+    font-size: 20px;
+
+}
+
+.iconsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    margin: 0px 10px;
+}
+
+.icons img {
+    width: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in 0s;
+}
+
+.icons img:active {
+    animation: animated 0.2s ease-in 0s 1 normal forwards;
+}
+
+@keyframes animated {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+footer .iconsBox .icons:nth-child(2) img {
+    width: 40px;
+}
